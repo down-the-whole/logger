@@ -1,0 +1,25 @@
+{
+    "name": "@cdbattags/dtw-npm-packages",
+    "version": "0.0.1",
+    "main": "./lib/index.js",
+    "scripts": {
+        "prepare": "npm-link-shared .. . @dtw/conf-loader --yarn && npm run build",
+        "build": "babel ./src --out-dir ./lib --extensions \".ts,.js\" --copy-files --source-maps inline",
+        "test": "node ./lib/test"
+    },
+    "dependencies": {
+        "@dtw/conf-loader": "file:../conf-loader",
+        "fclone": "^1.0.11",
+        "logform": "^2.1.2",
+        "moment": "^2.24.0",
+        "winston": "^3.2.1"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.6.0",
+        "@babel/core": "^7.6.0",
+        "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+        "@babel/preset-env": "^7.6.0",
+        "@babel/preset-typescript": "^7.6.0",
+        "npm-link-shared": "^0.5.6"
+    }
+}
