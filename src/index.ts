@@ -1,11 +1,12 @@
 import fs from 'fs'
+import path from 'path'
+
 import moment from 'moment'
 import winston from 'winston'
 import { format } from 'logform'
 import fclone from 'fclone'
-import path from 'path'
 
-import { getEnvironment } from '@dtw/conf-loader'
+import { getEnvironment } from '@down-the-whole/conf-loader'
 
 import loggerConf from './logger-conf'
 
